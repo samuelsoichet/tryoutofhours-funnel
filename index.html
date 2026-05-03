@@ -90,6 +90,18 @@
                     </div>
 
                     <div>
+                        <label class="block text-sm font-medium text-ooh-muted mb-1.5">What's your company's monthly revenue? *</label>
+                        <select name="revenue" required
+                            class="w-full bg-ooh-bg border border-ooh-teal/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-ooh-teal transition-colors">
+                            <option value="" disabled selected>Select range</option>
+                            <option value="Under $30K">Under $30K/mo</option>
+                            <option value="$30K-$100K">$30K – $100K/mo</option>
+                            <option value="$100K-$250K">$100K – $250K/mo</option>
+                            <option value="$250K+">$250K+/mo</option>
+                        </select>
+                    </div>
+
+                    <div>
                         <label class="block text-sm font-medium text-ooh-muted mb-1.5">How many L1 support tickets/calls per month?</label>
                         <select name="ticket_volume" required
                             class="w-full bg-ooh-bg border border-ooh-teal/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-ooh-teal transition-colors">
@@ -159,6 +171,7 @@
     <!-- Form Submission Script -->
     <script>
         const WEBHOOK_URL = 'https://n8n.outofhours.ai/webhook/funnel-application';
+        const CALENDLY_URL = 'https://calendly.com/eecservices/outofhoursai-discovery-call';
 
         document.getElementById('application-form').addEventListener('submit', async function(e) {
             e.preventDefault();
@@ -173,11 +186,19 @@
                 email: formData.get('email'),
                 phone: formData.get('phone'),
                 company: formData.get('company'),
+                revenue: formData.get('revenue'),
                 ticket_volume: formData.get('ticket_volume'),
                 biggest_challenge: formData.get('biggest_challenge'),
                 source: 'tryoutofhours.com',
                 version: 'A'
             };
+
+            // Fire tracking events
+            if (typeof fbq !== 'undefined') fbq('track', 'Lead');
+            if (typeof gtag !== 'undefined') gtag('event', 'form_submit', { event_category: 'funnel', event_label: 'application' });
+
+            // Pre-fill Calendly with name and email
+            const calUrl = CALENDLY_URL + '?name=' + encodeURIComponent(payload.name) + '&email=' + encodeURIComponent(payload.email);
 
             try {
                 await fetch(WEBHOOK_URL, {
@@ -185,16 +206,11 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
                 });
-
-                // Fire tracking events
-                if (typeof fbq !== 'undefined') fbq('track', 'Lead');
-                if (typeof gtag !== 'undefined') gtag('event', 'form_submit', { event_category: 'funnel', event_label: 'application' });
-
-                window.location.href = '/thank-you/';
             } catch (err) {
-                // Still redirect — n8n may be temporarily down but we don't want to lose the lead
-                window.location.href = '/thank-you/';
+                // Don't block redirect if webhook is down
             }
+
+            window.location.href = calUrl;
         });
     </script>
 </body>

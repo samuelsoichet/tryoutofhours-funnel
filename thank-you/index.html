@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Application Received — Out of Hours AI</title>
+    <title>You're Booked — Out of Hours AI</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,28 +31,122 @@
         body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-ooh-bg text-white min-h-screen flex items-center justify-center px-6">
+<body class="bg-ooh-bg text-white min-h-screen">
 
-    <div class="max-w-[520px] mx-auto text-center">
-        <!-- Teal Checkmark -->
-        <div class="w-20 h-20 rounded-full bg-ooh-teal/20 border-2 border-ooh-teal flex items-center justify-center mx-auto mb-8">
-            <svg class="w-10 h-10 text-ooh-teal" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-            </svg>
+    <!-- Confirmation Header -->
+    <section class="px-6 pt-20 pb-12">
+        <div class="max-w-[720px] mx-auto text-center">
+            <!-- Teal Checkmark -->
+            <div class="w-20 h-20 rounded-full bg-ooh-teal/20 border-2 border-ooh-teal flex items-center justify-center mx-auto mb-8">
+                <svg class="w-10 h-10 text-ooh-teal" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+                </svg>
+            </div>
+
+            <h1 class="text-3xl md:text-4xl font-extrabold mb-4">
+                You're All Set!
+            </h1>
+            <p class="text-lg text-ooh-muted max-w-[520px] mx-auto">
+                Your discovery call is booked. Here's what to expect before we meet.
+            </p>
         </div>
+    </section>
 
-        <h1 class="text-3xl md:text-4xl font-extrabold mb-4">
-            Application Received!
-        </h1>
+    <!-- You'll Get A Text -->
+    <section class="px-6 pb-12">
+        <div class="max-w-[720px] mx-auto">
+            <div class="bg-ooh-surface border border-ooh-teal/20 rounded-2xl p-8 text-center">
+                <p class="text-ooh-muted text-sm uppercase tracking-wide mb-2">You'll get an email from</p>
+                <p class="text-2xl md:text-3xl font-bold">sam.soichet@outofhours.ai</p>
+                <p class="text-ooh-muted text-sm mt-3">with your call details and a short prep checklist</p>
+            </div>
+        </div>
+    </section>
 
-        <p class="text-lg text-ooh-muted mb-6">
-            We review every application within 24 hours. If you qualify, a member of our team will reach out to schedule your free AI audit.
-        </p>
+    <!-- Video: What To Expect -->
+    <section class="px-6 py-12">
+        <div class="max-w-[720px] mx-auto">
+            <div class="bg-ooh-surface border border-ooh-teal/20 rounded-2xl overflow-hidden">
+                <div class="aspect-video flex items-center justify-center relative">
+                    <!-- Replace with actual video embed when recorded -->
+                    <div class="text-center">
+                        <div class="w-16 h-16 rounded-full bg-ooh-teal/20 border-2 border-ooh-teal flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-7 h-7 text-ooh-teal ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                        <p class="text-ooh-muted text-sm">Video coming soon</p>
+                    </div>
+                </div>
+                <div class="p-6 text-center border-t border-ooh-teal/10">
+                    <h3 class="text-xl font-bold mb-1">What To Expect On Your Discovery Call</h3>
+                    <p class="text-ooh-muted text-sm">3 min — how the call works and what to prepare</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <p class="text-ooh-muted text-sm">
+    <!-- Video: How The System Works -->
+    <section class="px-6 py-12">
+        <div class="max-w-[720px] mx-auto">
+            <div class="bg-ooh-surface border border-ooh-teal/20 rounded-2xl overflow-hidden">
+                <div class="aspect-video flex items-center justify-center relative">
+                    <!-- Replace with actual video embed when recorded -->
+                    <div class="text-center">
+                        <div class="w-16 h-16 rounded-full bg-ooh-teal/20 border-2 border-ooh-teal flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-7 h-7 text-ooh-teal ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                        <p class="text-ooh-muted text-sm">Video coming soon</p>
+                    </div>
+                </div>
+                <div class="p-6 text-center border-t border-ooh-teal/10">
+                    <h3 class="text-xl font-bold mb-1">How The AI Support System Works</h3>
+                    <p class="text-ooh-muted text-sm">5 min — the tech, the process, real results</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Credibility -->
+    <section class="px-6 py-12">
+        <div class="max-w-[720px] mx-auto">
+            <h2 class="text-2xl font-bold text-center mb-8">Why Companies Trust Us</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-ooh-surface border border-ooh-teal/20 rounded-xl p-6 text-center">
+                    <div class="text-3xl font-bold text-ooh-teal mb-2">160+</div>
+                    <div class="text-ooh-muted text-sm">Consultants Managed</div>
+                </div>
+                <div class="bg-ooh-surface border border-ooh-teal/20 rounded-xl p-6 text-center">
+                    <div class="text-3xl font-bold text-ooh-teal mb-2">$648K</div>
+                    <div class="text-ooh-muted text-sm">Identified in First Audit</div>
+                </div>
+                <div class="bg-ooh-surface border border-ooh-teal/20 rounded-xl p-6 text-center">
+                    <div class="text-3xl font-bold text-ooh-teal mb-2">Google & Snapchat</div>
+                    <div class="text-ooh-muted text-sm">Advisory Board</div>
+                </div>
+                <div class="bg-ooh-surface border border-ooh-teal/20 rounded-xl p-6 text-center">
+                    <div class="text-3xl font-bold text-ooh-teal mb-2">On-Premises</div>
+                    <div class="text-ooh-muted text-sm">Data Sovereignty Option</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="px-6 py-8 border-t border-ooh-teal/10">
+        <div class="max-w-[720px] mx-auto text-center text-ooh-muted text-sm">
             Questions? Email <a href="mailto:sam.soichet@outofhours.ai" class="text-ooh-teal hover:text-ooh-teal-hover transition-colors">sam.soichet@outofhours.ai</a>
-        </p>
-    </div>
+            <br class="mt-2">
+            &copy; 2026 Out of Hours AI Inc. | <a href="https://outofhours.ai" class="hover:text-ooh-teal transition-colors">outofhours.ai</a>
+        </div>
+    </footer>
 
+    <!-- Fire Schedule event for tracking -->
+    <script>
+        if (typeof fbq !== 'undefined') fbq('track', 'Schedule');
+        if (typeof gtag !== 'undefined') gtag('event', 'booking_complete', { event_category: 'funnel', event_label: 'discovery_call' });
+    </script>
 </body>
 </html>
