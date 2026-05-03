@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Out of Hours AI — AI-Powered L1 Support</title>
+    <meta name="description" content="The AI system that handles your L1 support calls 24/7, at 95% lower cost. Apply for a free AI audit.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="/tracking.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ooh-bg': '#1A0A2E',
+                        'ooh-surface': '#1F0F33',
+                        'ooh-teal': '#00B2AD',
+                        'ooh-teal-hover': '#33C1BD',
+                        'ooh-muted': '#A0A0B0',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-ooh-bg text-white min-h-screen">
+
+    <!-- Hero Section -->
+    <section class="px-6 pt-20 pb-16">
+        <div class="max-w-[720px] mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
+                The AI System That Handles Your L1 Support Calls — 24/7, At 95% Lower Cost
+            </h1>
+            <p class="text-lg md:text-xl text-ooh-muted mb-10 max-w-[600px] mx-auto">
+                No long-term contracts. No replacing your team. Works alongside your existing stack. Try it risk-free.
+            </p>
+            <a href="#apply" class="inline-block bg-ooh-teal hover:bg-ooh-teal-hover text-white font-semibold text-lg px-8 py-4 rounded-lg transition-colors">
+                Apply For A Free AI Audit
+            </a>
+        </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section id="apply" class="px-6 py-16">
+        <div class="max-w-[720px] mx-auto">
+            <div class="bg-ooh-surface border border-ooh-teal/20 rounded-2xl p-8 md:p-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-3">
+                    Fill Out The Application To See If You Qualify
+                </h2>
+                <p class="text-ooh-muted text-center mb-8">
+                    We only work with companies where we know we can deliver results. Apply below and we'll review within 24 hours.
+                </p>
+
+                <form id="application-form" class="space-y-5">
+                    <div>
+                        <label class="block text-sm font-medium text-ooh-muted mb-1.5">Full Name *</label>
+                        <input type="text" name="name" required
+                            class="w-full bg-ooh-bg border border-ooh-teal/20 rounded-lg px-4 py-3 text-white placeholder-ooh-muted/50 focus:outline-none focus:border-ooh-teal transition-colors"
+                            placeholder="John Smith">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-ooh-muted mb-1.5">Email *</label>
+                        <input type="email" name="email" required
+                            class="w-full bg-ooh-bg border border-ooh-teal/20 rounded-lg px-4 py-3 text-white placeholder-ooh-muted/50 focus:outline-none focus:border-ooh-teal transition-colors"
+                            placeholder="john@company.com">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-ooh-muted mb-1.5">Phone Number *</label>
+                        <input type="tel" name="phone" required
+                            class="w-full bg-ooh-bg border border-ooh-teal/20 rounded-lg px-4 py-3 text-white placeholder-ooh-muted/50 focus:outline-none focus:border-ooh-teal transition-colors"
+                            placeholder="+1 (555) 000-0000">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-ooh-muted mb-1.5">Company Name *</label>
+                        <input type="text" name="company" required
+                            class="w-full bg-ooh-bg border border-ooh-teal/20 rounded-lg px-4 py-3 text-white placeholder-ooh-muted/50 focus:outline-none focus:border-ooh-teal transition-colors"
+                            placeholder="Acme Corp">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-ooh-muted mb-1.5">How many L1 support tickets/calls per month?</label>
+                        <select name="ticket_volume" required
+                            class="w-full bg-ooh-bg border border-ooh-teal/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-ooh-teal transition-colors">
+                            <option value="" disabled selected>Select volume</option>
+                            <option value="Under 100">Under 100</option>
+                            <option value="100-500">100 – 500</option>
+                            <option value="500-1000">500 – 1,000</option>
+                            <option value="1000+">1,000+</option>
+                            <option value="Not sure">Not sure</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-ooh-muted mb-1.5">What's your biggest challenge with L1 support?</label>
+                        <textarea name="biggest_challenge" rows="3"
+                            class="w-full bg-ooh-bg border border-ooh-teal/20 rounded-lg px-4 py-3 text-white placeholder-ooh-muted/50 focus:outline-none focus:border-ooh-teal transition-colors resize-none"
+                            placeholder="e.g. After-hours coverage, high turnover, scaling costs..."></textarea>
+                    </div>
+
+                    <button type="submit" id="submit-btn"
+                        class="w-full bg-ooh-teal hover:bg-ooh-teal-hover text-white font-semibold text-lg py-4 rounded-lg transition-colors mt-4">
+                        Submit Application
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="px-6 py-16">
+        <div class="max-w-[720px] mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">
+                Built By Operators Who Lived The Problem
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-ooh-surface border border-ooh-teal/20 rounded-xl p-6 text-center">
+                    <div class="text-3xl font-bold text-ooh-teal mb-2">160+</div>
+                    <div class="text-ooh-muted text-sm">Consultants Managed</div>
+                    <div class="text-xs text-ooh-muted/60 mt-1">Enterprise IT track record</div>
+                </div>
+                <div class="bg-ooh-surface border border-ooh-teal/20 rounded-xl p-6 text-center">
+                    <div class="text-3xl font-bold text-ooh-teal mb-2">$648K</div>
+                    <div class="text-ooh-muted text-sm">Identified in First Audit</div>
+                    <div class="text-xs text-ooh-muted/60 mt-1">Operational savings for one client</div>
+                </div>
+                <div class="bg-ooh-surface border border-ooh-teal/20 rounded-xl p-6 text-center">
+                    <div class="text-3xl font-bold text-ooh-teal mb-2">Google & Snapchat</div>
+                    <div class="text-ooh-muted text-sm">Advisory Board</div>
+                    <div class="text-xs text-ooh-muted/60 mt-1">Ex-leadership from top tech companies</div>
+                </div>
+                <div class="bg-ooh-surface border border-ooh-teal/20 rounded-xl p-6 text-center">
+                    <div class="text-3xl font-bold text-ooh-teal mb-2">On-Premises</div>
+                    <div class="text-ooh-muted text-sm">Data Sovereignty Option</div>
+                    <div class="text-xs text-ooh-muted/60 mt-1">Your data never leaves your network</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="px-6 py-8 border-t border-ooh-teal/10">
+        <div class="max-w-[720px] mx-auto text-center text-ooh-muted text-sm">
+            &copy; 2026 Out of Hours AI Inc. | <a href="https://outofhours.ai" class="hover:text-ooh-teal transition-colors">outofhours.ai</a>
+        </div>
+    </footer>
+
+    <!-- Form Submission Script -->
+    <script>
+        const WEBHOOK_URL = 'https://n8n.outofhours.ai/webhook/funnel-application';
+
+        document.getElementById('application-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const btn = document.getElementById('submit-btn');
+            btn.disabled = true;
+            btn.textContent = 'Submitting...';
+
+            const formData = new FormData(this);
+            const payload = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                company: formData.get('company'),
+                ticket_volume: formData.get('ticket_volume'),
+                biggest_challenge: formData.get('biggest_challenge'),
+                source: 'tryoutofhours.com',
+                version: 'A'
+            };
+
+            try {
+                await fetch(WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                // Fire tracking events
+                if (typeof fbq !== 'undefined') fbq('track', 'Lead');
+                if (typeof gtag !== 'undefined') gtag('event', 'form_submit', { event_category: 'funnel', event_label: 'application' });
+
+                window.location.href = '/thank-you/';
+            } catch (err) {
+                // Still redirect — n8n may be temporarily down but we don't want to lose the lead
+                window.location.href = '/thank-you/';
+            }
+        });
+    </script>
+</body>
+</html>

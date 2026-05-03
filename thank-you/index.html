@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Received — Out of Hours AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="/tracking.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ooh-bg': '#1A0A2E',
+                        'ooh-surface': '#1F0F33',
+                        'ooh-teal': '#00B2AD',
+                        'ooh-teal-hover': '#33C1BD',
+                        'ooh-muted': '#A0A0B0',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-ooh-bg text-white min-h-screen flex items-center justify-center px-6">
+
+    <div class="max-w-[520px] mx-auto text-center">
+        <!-- Teal Checkmark -->
+        <div class="w-20 h-20 rounded-full bg-ooh-teal/20 border-2 border-ooh-teal flex items-center justify-center mx-auto mb-8">
+            <svg class="w-10 h-10 text-ooh-teal" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+            </svg>
+        </div>
+
+        <h1 class="text-3xl md:text-4xl font-extrabold mb-4">
+            Application Received!
+        </h1>
+
+        <p class="text-lg text-ooh-muted mb-6">
+            We review every application within 24 hours. If you qualify, a member of our team will reach out to schedule your free AI audit.
+        </p>
+
+        <p class="text-ooh-muted text-sm">
+            Questions? Email <a href="mailto:sam.soichet@outofhours.ai" class="text-ooh-teal hover:text-ooh-teal-hover transition-colors">sam.soichet@outofhours.ai</a>
+        </p>
+    </div>
+
+</body>
+</html>
