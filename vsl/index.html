@@ -106,14 +106,15 @@
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-ooh-muted mb-1.5">Company Annual Revenue *</label>
-                        <select name="revenue" required
+                        <label class="block text-sm font-medium text-ooh-muted mb-1.5">How many L1 support tickets per month? *</label>
+                        <select name="monthly_tickets" required
                             class="w-full bg-ooh-bg border border-ooh-teal/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-ooh-teal transition-colors">
                             <option value="" disabled selected>Select range</option>
-                            <option value="Under $3M">Under $3M/yr</option>
-                            <option value="$3M-$10M">$3M – $10M/yr</option>
-                            <option value="$10M-$50M">$10M – $50M/yr</option>
-                            <option value="$50M+">$50M+/yr</option>
+                            <option value="Under 500">Under 500</option>
+                            <option value="500-2,000">500 – 2,000</option>
+                            <option value="2,000-5,000">2,000 – 5,000</option>
+                            <option value="5,000+">5,000+</option>
+                            <option value="Not sure">Not sure / expecting growth</option>
                         </select>
                     </div>
 
@@ -265,7 +266,7 @@
                 email: formData.get('email'),
                 phone: formData.get('phone'),
                 company: formData.get('company'),
-                revenue: formData.get('revenue'),
+                monthly_tickets: formData.get('monthly_tickets'),
                 l1_engineers: formData.get('l1_engineers'),
                 source: 'tryoutofhours.com',
                 version: 'B-vsl'
