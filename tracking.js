@@ -3,7 +3,6 @@
 // ============================================================
 
 // --- Facebook Pixel ---
-// Replace with your actual Pixel ID from Meta Business Manager
 const FB_PIXEL_ID = '981200371161948';
 
 !function(f,b,e,v,n,t,s)
